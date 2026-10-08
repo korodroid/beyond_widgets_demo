@@ -1,0 +1,61 @@
+{
+  "@@locale": "ja",
+
+  "appTitle": "Beyond Widgets",
+
+  "demo01Title": "ナイーブなオーバーレイ",
+  "demo01Subtitle": "CameraPreview + Stack + 単純なスケーリング —— 崩れる様子を見る",
+  "demo02Title": "座標変換",
+  "demo02Subtitle": "Detect → Normalize → Rotate → Scale → Offset",
+  "demo03Title": "カメラパイプラインと同期",
+  "demo03Subtitle": "ナイーブなキューイング vs. Latest Frame + Back Pressure",
+  "demo04Title": "描画パフォーマンス",
+  "demo04Subtitle": "setState() everything vs. Listenable + CustomPainter",
+  "demo05Title": "インタラクティブなオーバーレイ",
+  "demo05Subtitle": "双方向変換: タップ → 画像座標",
+  "demo06Title": "スマートフォン画面の先へ",
+  "demo06Subtitle": "実OCR → 翻訳 → Even Hub SDK経由でEven G2へ",
+
+  "fitCover": "cover",
+  "fitContain": "contain",
+  "realMlKitOcr": "実ML Kit OCR",
+  "switchCameraTooltip": "カメラを切り替え",
+
+  "naiveOverlayHint": "scaleX/scaleYのみ —— 回転やBoxFitのクロップ補正なし。端末を回転するか\"contain\"に切り替えると崩れます。",
+
+  "correctedTransformTitle": "補正済みTransform Pipeline",
+  "correctedTransformOnSubtitle": "Detect → Normalize → Rotate → Scale → Offset",
+  "correctedTransformOffSubtitle": "ナイーブなscaleX/scaleY（デモ01と同じ）",
+
+  "pacingNaiveLabel": "ナイーブ: 毎フレーム処理",
+  "pacingLatestFrameLabel": "Latest Frame + Back Pressure",
+  "simulatedAnalysisTime": "解析時間（擬似）: {ms} ms（キャプチャは約30fps/33ms固定）",
+  "statProcessed": "処理済み",
+  "statQueued": "キュー",
+  "statDropped": "破棄",
+  "statLastLatency": "直近の遅延",
+  "latencyMs": "{ms}ms",
+  "naiveQueueExplanation": "キャプチャしたフレームはすべてキューに入ります。解析がキャプチャより遅い場合、キューは無限に増え続け、遅延も増加し続けます。",
+  "latestFrameExplanation": "解析中は最新のフレームだけを保持し、その間にキャプチャされたフレームは破棄されるため、遅延は一定の範囲に収まります。",
+  "queueMore": "他{count}件",
+
+  "renderNaiveLabel": "Naive: setState() everything",
+  "renderBetterLabel": "Listenable + CustomPainter",
+  "statHeavyTreeBuilds": "重いツリーの再構築回数",
+  "statAvgFrameBuild": "平均フレーム構築時間",
+  "avgFrameBuildValue": "{ms} ms",
+
+  "tapHint": "ボックスをタップしてスクリーン座標→画像座標に変換します。",
+  "noBoxAtPoint": "画像座標 ({x}, {y}) にボックスはありません",
+  "hitBoxAtPoint": "画像座標 ({x}, {y}) で「{label}」にヒット",
+
+  "noCameraAvailable": "この端末では利用可能なカメラがありません。",
+  "bridgeLabel": "ブリッジ",
+  "bridgeListening": "ws://127.0.0.1:{port}",
+  "bridgeStopped": "停止中",
+  "evenHubClientsLabel": "Even Hub 接続数",
+  "recognizedLabel": "認識結果（OCR）",
+  "sentToG2Label": "G2へ送信",
+
+  "noValuePlaceholder": "–"
+}

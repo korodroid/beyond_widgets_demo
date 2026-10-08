@@ -1,0 +1,69 @@
+{
+  "@@locale": "en",
+
+  "appTitle": "Beyond Widgets",
+  "@appTitle": {"description": "App name, shown as the home screen's AppBar title and OS-level app title."},
+
+  "demo01Title": "Naive Overlay",
+  "demo01Subtitle": "CameraPreview + Stack + naive scaling — watch it break",
+  "demo02Title": "Coordinate Transform",
+  "demo02Subtitle": "Detect → Normalize → Rotate → Scale → Offset",
+  "demo03Title": "Camera Pipeline & Sync",
+  "demo03Subtitle": "Naive queueing vs. latest-frame back pressure",
+  "demo04Title": "Rendering Performance",
+  "demo04Subtitle": "setState() everything vs. Listenable + CustomPainter",
+  "demo05Title": "Interactive Overlay",
+  "demo05Subtitle": "Bidirectional transform: tap → image coordinates",
+  "demo06Title": "Beyond the Phone Screen",
+  "demo06Subtitle": "Real OCR → translation → Even G2 via Even Hub SDK",
+
+  "fitCover": "cover",
+  "fitContain": "contain",
+  "realMlKitOcr": "Real ML Kit OCR",
+  "switchCameraTooltip": "Switch camera",
+
+  "naiveOverlayHint": "scaleX/scaleY only — no rotation or BoxFit-crop compensation. Rotate the device or switch to \"contain\" to see it break.",
+
+  "correctedTransformTitle": "Corrected transform pipeline",
+  "correctedTransformOnSubtitle": "Detect → Normalize → Rotate → Scale → Offset",
+  "correctedTransformOffSubtitle": "Naive scaleX/scaleY (same as demo 01)",
+
+  "pacingNaiveLabel": "Naive: process every frame",
+  "pacingLatestFrameLabel": "Latest frame + back pressure",
+  "simulatedAnalysisTime": "Simulated analysis time: {ms} ms (capture is fixed at ~30 fps / 33 ms)",
+  "@simulatedAnalysisTime": {"placeholders": {"ms": {"type": "int"}}},
+  "statProcessed": "Processed",
+  "statQueued": "Queued",
+  "statDropped": "Dropped",
+  "statLastLatency": "Last latency",
+  "latencyMs": "{ms}ms",
+  "@latencyMs": {"placeholders": {"ms": {"type": "int"}}},
+  "naiveQueueExplanation": "Every captured frame is queued. If analysis is slower than capture, the queue grows without bound and latency keeps climbing.",
+  "latestFrameExplanation": "Only the newest frame is kept while one is being analyzed; anything captured in between is dropped, so latency stays bounded.",
+  "queueMore": "+{count} more",
+  "@queueMore": {"placeholders": {"count": {"type": "int"}}},
+
+  "renderNaiveLabel": "Naive: setState() everything",
+  "renderBetterLabel": "Listenable + CustomPainter",
+  "statHeavyTreeBuilds": "Heavy tree builds",
+  "statAvgFrameBuild": "Avg frame build",
+  "avgFrameBuildValue": "{ms} ms",
+  "@avgFrameBuildValue": {"placeholders": {"ms": {"type": "String"}}},
+
+  "tapHint": "Tap a box to convert screen -> image coordinates.",
+  "noBoxAtPoint": "No box at image point ({x}, {y})",
+  "@noBoxAtPoint": {"placeholders": {"x": {"type": "int"}, "y": {"type": "int"}}},
+  "hitBoxAtPoint": "Hit \"{label}\" at image point ({x}, {y})",
+  "@hitBoxAtPoint": {"placeholders": {"label": {"type": "String"}, "x": {"type": "int"}, "y": {"type": "int"}}},
+
+  "noCameraAvailable": "No camera available on this device.",
+  "bridgeLabel": "Bridge",
+  "bridgeListening": "ws://127.0.0.1:{port}",
+  "@bridgeListening": {"placeholders": {"port": {"type": "int"}}},
+  "bridgeStopped": "stopped",
+  "evenHubClientsLabel": "Even Hub clients",
+  "recognizedLabel": "Recognized (OCR)",
+  "sentToG2Label": "Sent to G2",
+
+  "noValuePlaceholder": "–"
+}
